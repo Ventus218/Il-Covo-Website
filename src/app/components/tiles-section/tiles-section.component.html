@@ -1,0 +1,8 @@
+<div class="tilesSection">
+    <div class="tilesSectionTitle">
+        <h1>{{ title }}</h1>
+    </div>
+    <div class="tilesRow">
+        <app-tile [tileRepresentable] = "tile" *ngFor="let tile of tiles"></app-tile>
+    </div>
+</div>

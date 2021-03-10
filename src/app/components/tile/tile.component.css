@@ -1,0 +1,45 @@
+
+.tile {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+    width: 240px;
+    height: 280px;
+    border-radius: 20px;
+    margin: 10px;
+    margin-top: 20px;
+
+    background-color: lightgray;
+
+}
+
+.tile:hover {
+    transition-duration: 200ms;
+    transition-timing-function: ease-in-out;
+    transform: scale(1.02);    
+}
+
+.tile img {
+    position: relative;
+    bottom: 20px;
+
+    width: 75%; 
+    margin: 20px;   
+}
+
+.tile h2 {
+    position: relative;
+    bottom: 20px;
+
+    text-align: center;
+    /*line-height: 20px;*/
+}
+
+@media only screen and (max-width: 767px) {
+    .tile {
+        width: 160px;
+        height: 200px;
+    }
+}
