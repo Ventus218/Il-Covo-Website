@@ -1,5 +1,6 @@
 <br><br><br><br><br><br>
 
 <div class="reservations-container">
+    <mat-spinner *ngIf="isWaitingForData"></mat-spinner>
     <app-reservation *ngFor="let reservation of reservations" [reservation]="reservation"></app-reservation>
 </div>

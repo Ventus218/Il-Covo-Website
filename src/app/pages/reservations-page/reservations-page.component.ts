@@ -10,6 +10,7 @@ import { ReservationsService } from './services/reservations.service';
 export class ReservationsPageComponent implements OnInit {
 
   reservations?: Reservation[]
+  isWaitingForData: Boolean = true
 
   constructor(private reservationsService: ReservationsService) { }
 
@@ -17,6 +18,7 @@ export class ReservationsPageComponent implements OnInit {
     this.reservationsService.getReservations().subscribe( reservations => {
       this.reservations = reservations
       .map(r => new Reservation(r.author, r.startDate, r.endDate, r.details))
+      this.isWaitingForData = false
     })
   }
 

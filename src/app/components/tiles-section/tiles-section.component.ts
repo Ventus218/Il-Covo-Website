@@ -19,24 +19,26 @@ export class TilesSectionComponent implements OnInit {
 
   tiles!: TileRepresentable[]
 
+  isWaitingForData: Boolean = true
+
   constructor(private jsonService: FunsManagerService, private rulesService: RulesManagerService) {
     this.funsService = jsonService
   }
 
   ngOnInit(): void {
-
+    
     if (this.typeOfTileObjects == TypeOfTileObject.RULE) {
       this.rulesService.getRules().subscribe(tiles => {
         this.tiles = tiles
+        this.isWaitingForData = false
       })
     } else {
-
       this.funsService.getFuns().subscribe(tiles => {
         this.tiles = tiles
+        this.isWaitingForData = false
       })
     }
   }
-
 }
 
 export enum TypeOfTileObject {

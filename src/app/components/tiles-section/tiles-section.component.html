@@ -3,6 +3,7 @@
         <h1>{{ title }}</h1>
     </div>
     <div class="tilesRow">
+        <mat-spinner *ngIf="isWaitingForData"></mat-spinner>
         <app-tile [tileRepresentable] = "tile" *ngFor="let tile of tiles"></app-tile>
     </div>
 </div>

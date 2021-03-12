@@ -1,6 +1,7 @@
 /* You can add global styles to this file, and also import other style files */
 
 @import url('https://fonts.googleapis.com/css2?family=Jura:wght@400;500&display=swap');
+@import '@angular/material/prebuilt-themes/indigo-pink.css';
 
 * {
     box-sizing: border-box;
@@ -69,4 +70,16 @@
     height: 2px;
     margin: 80px 5% 70px 5%;
     background-color: #888888;
+}
+
+/* MAT SPINNER */
+
+mat-spinner {
+    animation: fadein 2s;
+}
+
+@keyframes fadein {
+    0% { opacity:0; }
+    25% { opacity:0; }
+    100% { opacity:1; }
 }

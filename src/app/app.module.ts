@@ -10,6 +10,7 @@ import { ReservationsPageComponent } from './pages/reservations-page/reservation
 import { ReservationComponent } from './pages/reservations-page/components/reservation/reservation.component';
 import { TilesSectionComponent } from './components/tiles-section/tiles-section.component';
 import { TileComponent } from './components/tile/tile.component';
+import { MatProgressSpinnerModule } from '@angular/material/progress-spinner'
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { TileComponent } from './components/tile/tile.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    MatProgressSpinnerModule
   ],
   providers: [],
   bootstrap: [AppComponent]
